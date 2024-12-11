@@ -3,7 +3,7 @@ from sort import sort
 
 def test_volume_calculations():
     """Test cases for volume calculations"""
-    assert sort(100, 100, 100, 10) == "SPECIAL"    # Volume = 1,000,000 (>= in code)
+    assert sort(100, 100, 100, 10) == "SPECIAL"    # Volume = 1,000,000 
     assert sort(99, 99, 99, 10) == "STANDARD"      # Volume < 1,000,000
     assert sort(101, 100, 100, 10) == "SPECIAL"    # Volume > 1,000,000
 
