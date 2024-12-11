@@ -1,3 +1,5 @@
+import math
+
 def sort(width, height, length, mass) -> str:
     for x in [width, height, length, mass]:
         if not is_positive_number(x):
@@ -8,6 +10,9 @@ def sort(width, height, length, mass) -> str:
         h = float(height)
         l = float(length)
         m = float(mass)
+
+        if any(math.isinf(x) for x in [w, h, l, m]):
+            return "REJECTED"
     except:
         return "REJECTED"
     
